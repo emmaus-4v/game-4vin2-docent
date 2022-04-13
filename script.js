@@ -17,6 +17,8 @@ var spelStatus = SPELEN;
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 
+var vijandX = 600;
+var vijandY = 500
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -65,6 +67,10 @@ var tekenAlles = function () {
   fill('green');
   rect(0,0, width, height);
   // vijand
+  fill("red");
+  rect(vijandX - 25, vijandY - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX, vijandY, 10, 10);
 
   // kogel
 
