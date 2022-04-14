@@ -10,6 +10,8 @@
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
+var aantal = 0;
+
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
@@ -17,8 +19,8 @@ var spelStatus = SPELEN;
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 
-var vijandX = 600;
-var vijandY = 500
+var vijandX = 800;
+var vijandY = 600
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -52,7 +54,13 @@ var beweegAlles = function () {
  */
 var verwerkBotsing = function () {
   // botsing speler tegen vijand
-
+  if (spelerX - vijandX < 50 &&
+      vijandX - spelerX < 50 &&
+      spelerY - vijandY < 50 &&
+      vijandY - spelerY < 50) {
+    aantal = aantal + 1;
+    console.log("botsing "+aantal)
+  }
   // botsing kogel tegen vijand
 
   // update punten en health
